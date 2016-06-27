@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clover Spinner Example</title>
+    <style>
+        div.box { min-width: 100%; min-height: 100%; background: #e3e3e3; }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.round {
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        div.round+.round {
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+            transform: rotate(90deg);
+        }
+        div.wrapper.inner .round {
+            animation:spin 1.5s linear infinite;
+        }
+        div.wrapper.inner .round+.round {
+            animation:spin90 1.5s linear infinite;
+        }
+        div.wrapper.outer .round {
+            animation:spin 3s linear infinite;
+        }
+        div.wrapper.outer .round+.round {
+            animation:spin90 3s linear infinite;
+        }
+
+        div.round.blue { border: 20px solid #3fb0ac; border-radius: 30px; }
+        div.round.red { border: 20px solid #fae596; border-radius: 30px; }
+        div.dot {
+            width: 0px;
+            border: 20px solid #fae596;
+            border-radius: 30px;
+            top: 50%;
+            left: 50%;
+            margin-left: 100px;
+            position: absolute;
+        }
+        @keyframes spin {
+            0% {
+                transform:rotate(0deg);
+            }
+            100% {
+                transform:rotate(360deg);
+            }
+        }
+        @keyframes spin90 {
+            0% {
+                transform:rotate(90deg);
+            }
+            100% {
+                transform:rotate(450deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="wrapper inner">
+            <div class="round red"></div>
+            <div class="round red"></div>
+        </div>
+        <div class="wrapper outer">
+            <div class="round blue"></div>
+            <div class="round blue"></div>
+        </div>
+        <div class="dot"></div>
+    </div>
+</body>
+</html>
