@@ -22,16 +22,24 @@
             transform: rotate(90deg);
         }
         div.wrapper.inner .round {
-            animation:spin 1.5s linear infinite;
+            animation:spin 1.5s infinite;
+            transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
         }
         div.wrapper.inner .round+.round {
-            animation:spin90 1.5s linear infinite;
+            animation:spin90 1.5s infinite;
+            transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
         }
         div.wrapper.outer .round {
-            animation:spin 3s linear infinite;
+            animation:spin 3s infinite;
+            transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
         }
         div.wrapper.outer .round+.round {
-            animation:spin90 3s linear infinite;
+            animation:spin90 3s infinite;
+            transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
         }
 
         div.round.blue { border: 20px solid #3fb0ac; border-radius: 30px; }
