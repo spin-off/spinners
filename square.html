@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Square:Spinner Example</title>
+    <style>
+        .wrapper {
+            background: #e3e3e3;
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            left: 50%;
+            top: 50%;
+            overflow: auto;
+            position: absolute;
+            transform-origin: 50% 50%;
+        }
+        .box.red {
+            animation:spin-inner 2s cubic-bezier(.62, 0, .40, 1) infinite;
+        }
+        .box.blue {
+            animation:spin-outer 2s cubic-bezier(.62, 0, .40, 1) infinite;
+        }
+        @keyframes spin-inner {
+            0% {
+                width: 50px;
+                height: 50px;
+                transform:rotate(0deg);
+                margin-left: -25px;
+                margin-top: -25px;
+            }
+            50% {
+                width: 30px;
+                height: 30px;
+                transform:rotate(180deg);
+                margin-left: -15px;
+                margin-top: -15px;
+            }
+            /*60% {*/
+                /*width: 25px;*/
+                /*height: 25px;*/
+                /*opacity: 0.5;*/
+                /*transform:rotate(180deg);*/
+                /*margin-left: -12.5px;*/
+                /*margin-top: -12.5px;*/
+            /*}*/
+            100% {
+                width: 50px;
+                height: 50px;
+                transform:rotate(360deg);
+                margin-left: -25px;
+                margin-top: -25px;
+            }
+        }
+        @keyframes spin-outer {
+            0% {
+                width: 30px;
+                height: 30px;
+                transform:rotate(360deg);
+                margin-left: -15px;
+                margin-top: -15px;
+            }
+            50% {
+                width: 50px;
+                height: 50px;
+                transform:rotate(180deg);
+                margin-left: -25px;
+                margin-top: -25px;
+            }
+            /*60% {*/
+                /*width: 50px;*/
+                /*height: 50px;*/
+                /*opacity: 1.0;*/
+                /*transform:rotate(180deg);*/
+                /*margin-left: -25px;*/
+                /*margin-top: -25px;*/
+            /*}*/
+            100% {
+                width: 30px;
+                height: 30px;
+                transform:rotate(0deg);
+                margin-left: -15px;
+                margin-top: -15px;
+            }
+        }
+        .blue { background: blue; }
+        .red { background: red; }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box red"></div>
+    <div class="box blue"></div>
+</div>
+</body>
+</html>
