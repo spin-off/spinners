@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <title>Square2:Spinner Example</title>
     <style>
-        .box { width: 600px; height: 600px; position: relative; background: #e3e3e3; margin: 0 auto; }
-        .square { border: 6px solid black; position: absolute; top: 50%; left: 50%; }
+        .box {
+            width: 600px; height: 600px; position: relative; background: #e3e3e3; margin: 0 auto;
+            -webkit-perspective: 100px;
+            perspective: 100px;
+        }
+        .square { border: 5px solid black; position: absolute; top: 50%; left: 50%; }
         .square.big {
-            width: 100px; height: 100px; margin-left: -50px; margin-top: -50px;
+            width: 50px; height: 50px; margin-left: -25px; margin-top: -25px;
             animation-name: rotate1; animation-duration: 2s; animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
         }
         .square.small {
-            width: 50px; height: 50px; margin-left: -25px; margin-top: -25px;
+            width: 16px; height: 16px; margin-left: -8px; margin-top: -8px;
             animation-name: rotate2; animation-duration: 2s; animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
         }
