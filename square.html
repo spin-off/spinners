@@ -22,10 +22,14 @@
             opacity: 0.7;
         }
         .box.red {
-            animation:spin-inner 4s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+            animation-name: spin-inner; animation-duration: 4s; animation-iteration-count: infinite;
+            /*animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);*/
+            animation-timing-function: ease-in-out;
         }
         .box.blue {
-            animation:spin-outer 4s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+            animation-name: spin-outer; animation-duration: 4s; animation-iteration-count: infinite;
+            /*animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);*/
+            animation-timing-function: ease-in-out;
         }
         @keyframes spin-inner {
             0% {
@@ -35,34 +39,34 @@
                 margin-left: -25px;
                 margin-top: -25px;
             }
-            25% {
+            33% {
                 width: 30px;
                 height: 30px;
                 transform:rotate(180deg);
                 margin-left: -15px;
                 margin-top: -15px;
             }
-            50% {
+            66% {
                 width: 50px;
                 height: 50px;
                 transform:rotate(360deg);
                 margin-left: -25px;
                 margin-top: -25px;
             }
-            75% {
+            100% {
                 width: 30px;
                 height: 30px;
                 transform:rotate(180deg);
                 margin-left: -15px;
                 margin-top: -15px;
             }
-            100% {
-                width: 50px;
-                height: 50px;
-                transform:rotate(0deg);
-                margin-left: -25px;
-                margin-top: -25px;
-            }
+            /*100% {*/
+                /*width: 50px;*/
+                /*height: 50px;*/
+                /*transform:rotate(0deg);*/
+                /*margin-left: -25px;*/
+                /*margin-top: -25px;*/
+            /*}*/
         }
         @keyframes spin-outer {
             0% {
@@ -72,34 +76,34 @@
                 margin-left: -15px;
                 margin-top: -15px;
             }
-            25% {
+            33% {
                 width: 50px;
                 height: 50px;
                 transform:rotate(180deg);
                 margin-left: -25px;
                 margin-top: -25px;
             }
-            50% {
+            66% {
                 width: 30px;
                 height: 30px;
                 transform:rotate(0deg);
                 margin-left: -15px;
                 margin-top: -15px;
             }
-            75% {
+            100% {
                 width: 50px;
                 height: 50px;
                 transform:rotate(180deg);
                 margin-left: -25px;
                 margin-top: -25px;
             }
-            100% {
-                width: 30px;
-                height: 30px;
-                transform:rotate(360deg);
-                margin-left: -15px;
-                margin-top: -15px;
-            }
+            /*100% {*/
+                /*width: 30px;*/
+                /*height: 30px;*/
+                /*transform:rotate(360deg);*/
+                /*margin-left: -15px;*/
+                /*margin-top: -15px;*/
+            /*}*/
         }
         .blue { background: #e1445c; }
         .red { background: #a94aa8; }
