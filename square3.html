@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Square3:Spinner Example</title>
+    <style>
+        .box {
+            width: 600px; height: 600px; position: relative; background: #e3e3e3; margin: 0 auto;
+            -webkit-perspective: 100px;
+            perspective: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .spinner-wrapper {
+            width: 90px; height: 90px; background: red;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item {
+            width: 30px; height: 30px; background: #ffffff;
+            animation-name: rotate; animation-duration: 2s; animation-iteration-count: infinite;
+        }
+        .spinner-wrapper .item:nth-child(1) { animation-delay: 0.0s; }
+        .spinner-wrapper .item:nth-child(2) { animation-delay: 0.1s; }
+        .spinner-wrapper .item:nth-child(3) { animation-delay: 0.2s; }
+        .spinner-wrapper .item:nth-child(4) { animation-delay: 0.3s; }
+        .spinner-wrapper .item:nth-child(5) { animation-delay: 0.4s; }
+        .spinner-wrapper .item:nth-child(6) { animation-delay: 0.5s; }
+        .spinner-wrapper .item:nth-child(7) { animation-delay: 0.6s; }
+        .spinner-wrapper .item:nth-child(8) { animation-delay: 0.7s; }
+        .spinner-wrapper .item:nth-child(9) { animation-delay: 0.8s; }
+        @keyframes rotate {
+            0%   { transform: rotateY(0deg); }
+            40%  { transform: rotateY(180deg); }
+            100% { transform: rotateY(180deg); }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="spinner-wrapper">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</div>
+</body>
+</html>
