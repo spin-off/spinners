@@ -12,97 +12,99 @@
             margin: 0 auto;
         }
         .box {
-            width: 100px;
-            height: 100px;
+            /*width: 100px;*/
+            /*height: 100px;*/
             left: 50%;
             top: 50%;
             overflow: auto;
             position: absolute;
             transform-origin: 50% 50%;
-            opacity: 0.7;
+            opacity: 0.5;
         }
         .box.red {
-            animation:spin-inner 4s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+            animation-name: spin-inner; animation-duration: 1.5s; animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
         }
         .box.blue {
-            animation:spin-outer 4s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+            animation-name: spin-outer; animation-duration: 1.5s; animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
         }
         @keyframes spin-inner {
             0% {
-                width: 50px;
-                height: 50px;
-                transform:rotate(0deg);
-                margin-left: -25px;
-                margin-top: -25px;
+                width: 40px;
+                height: 40px;
+                transform: rotateZ(360deg);
+                margin-left: -20px;
+                margin-top: -20px;
             }
-            25% {
-                width: 30px;
-                height: 30px;
-                transform:rotate(180deg);
-                margin-left: -15px;
-                margin-top: -15px;
+            45% {
+                width: 20px;
+                height: 20px;
+                transform: rotateZ(180deg);
+                margin-left: -10px;
+                margin-top: -10px;
             }
-            50% {
-                width: 50px;
-                height: 50px;
-                transform:rotate(360deg);
-                margin-left: -25px;
-                margin-top: -25px;
+            55% {
+                width: 20px;
+                height: 20px;
+                transform: rotateZ(180deg);
+                margin-left: -10px;
+                margin-top: -10px;
             }
-            75% {
-                width: 30px;
-                height: 30px;
-                transform:rotate(180deg);
-                margin-left: -15px;
-                margin-top: -15px;
+            89.9% {
+                width: 40px;
+                height: 40px;
+                transform: rotateZ(0deg);
+                margin-left: -20px;
+                margin-top: -20px;
             }
             100% {
-                width: 50px;
-                height: 50px;
-                transform:rotate(0deg);
-                margin-left: -25px;
-                margin-top: -25px;
+                width: 40px;
+                height: 40px;
+                transform: rotateZ(0deg);
+                margin-left: -20px;
+                margin-top: -20px;
             }
         }
         @keyframes spin-outer {
             0% {
-                width: 30px;
-                height: 30px;
-                transform:rotate(360deg);
-                margin-left: -15px;
-                margin-top: -15px;
+                width: 20px;
+                height: 20px;
+                transform:rotateZ(0deg);
+                margin-left: -10px;
+                margin-top: -10px;
             }
-            25% {
-                width: 50px;
-                height: 50px;
-                transform:rotate(180deg);
-                margin-left: -25px;
-                margin-top: -25px;
+            45% {
+                width: 40px;
+                height: 40px;
+                transform:rotateZ(180deg);
+                margin-left: -20px;
+                margin-top: -20px;
             }
-            50% {
-                width: 30px;
-                height: 30px;
-                transform:rotate(0deg);
-                margin-left: -15px;
-                margin-top: -15px;
+            55% {
+                width: 40px;
+                height: 40px;
+                transform:rotateZ(180deg);
+                margin-left: -20px;
+                margin-top: -20px;
             }
-            75% {
-                width: 50px;
-                height: 50px;
-                transform:rotate(180deg);
-                margin-left: -25px;
-                margin-top: -25px;
+            89.9% {
+                width: 20px;
+                height: 20px;
+                transform:rotateZ(360deg);
+                margin-left: -10px;
+                margin-top: -10px;
             }
             100% {
-                width: 30px;
-                height: 30px;
-                transform:rotate(360deg);
-                margin-left: -15px;
-                margin-top: -15px;
+                width: 20px;
+                height: 20px;
+                transform:rotateZ(360deg);
+                margin-left: -10px;
+                margin-top: -10px;
             }
         }
-        .blue { background: #e1445c; }
-        .red { background: #a94aa8; }
+        .blue { background: #333333; }
+        .red { background: #cccccc; }
     </style>
 </head>
 <body>
